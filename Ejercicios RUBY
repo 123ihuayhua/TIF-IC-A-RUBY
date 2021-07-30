@@ -1,0 +1,155 @@
+Ejercicios Ruby - Básicos 
+
+Ejercicio 01: Unir Cadenas
+
+#Unir cadenas
+#Autor: Anthony Moroccoire
+cadena1 = "Esta es una cadena de caracteres&quot"
+cadena2 = "y esta otra cadena&quot"
+
+#Se muestra en pantalla la cadena1 y cadena2 concatenadas
+
+puts cadena1 +" "+ cadena2
+end                           #Fin del programa
+
+
+
+
+Ejercicio 02: Producto String por Int
+
+#Producto StringxInt
+#Autor: Anthony Moroccoire
+print "Ingrese su nombre"
+#Se lee el nombre del usuario y se imprime en pantalla
+
+name = gets.chomp
+puts "Hola "+name
+
+#Cantidad de caracteres del nombre
+print"Tu nombre tiene",name.length,"letras"
+puts "\n"
+print "Cuántos años tienes: "
+#Se convierte el String a entero para posteriormente ser
+ multiplicado por la cantidad de caracteres
+age = gets.chomp.to_i
+puts "El producto es: ", age*name.length
+end                       #Fin del programa   
+
+
+
+
+Ejercicios Ruby - Intermedios 
+
+Ejercicio 01: Promedios 
+# Autor: Promedios 
+#Autor: Roni Companocca 
+Def promedio(arr)                                #introducimos el arreglo
+    Suma = 0            
+    arr.each do |num|
+              Suma += num
+    end
+    suma/arr.length.to_f
+end
+puts promedio([ 12, 15, 17, 19])    #ingresamos los valores del arreglo para hallar el promedio de los numeros 
+
+
+Ejercicio 02: Algoritmo de Inserción 
+#Autor: Roni Companocca Checco
+Def ordenar(arr)                                           #introducimos el arreglo
+       Loop do
+           Intercambiar = false
+           for i  in 0…arr.length -1
+                   if arr[i] > arr[i+1]
+                        arr[i], arr[i+1] = arr[i+1], arr[i]
+                        intercambiar = true
+                    end
+             end
+             break unless intercambiar
+         end
+         arr
+end
+puts ordenar([3,4,5,1,2,7,6,9,8)].inspect       #introducimos los valores del arreglo para que sean ordenados
+ 
+
+
+Ejercicios Ruby - Avanzados 
+
+Ejercicio 01: Raices Cuadráticas
+
+#Programa que evalúa la ecuación de segundo grado 
+#Iván Huayhua 
+print "\nBienvenido al Lenguaje Ruby\n"
+print "===============================\n"
+print "\nEvaluando la ecuacion de segundo grado\n"
+print "Valor de la constante A:"
+a=gets().to_i
+if a!=0 then
+ print "Valor de la constante B:"
+ b=gets().to_i
+ print "Valor de la constante C:"
+ c=gets().to_i
+ print "\nLa ecuacion es = ",a,"X^",2," + ",b,"X + ",c,"\n"
+ d=b*b-4*a*c
+ if d<0 then
+ print "Tiene raiz imaginaria"
+ else
+ x1=(-b+Math.sqrt(d))/(2*a)
+ x2=(-b-Math.sqrt(d))/(2*a)
+ puts "X1="+x1.to_s
+ print "X2="+x2.to_s
+ end
+else
+ print "El valor de A debe ser diferente de 0"
+end
+gets()
+
+Ejercicio 02: Suma de Matrices
+
+# Autor: Suma de Matrices
+# Autor: Roni Companocca Checco
+def solución(matriz_uno, matriz_dos, nf, nc)              #definimos los varíales a usar
+   if(nf == 0) && (nc==0)                                       
+       return matriz_uno[nf][nc] +matriz¬_dos[nf][nc]   #comenzamos a sumar las matrices 
+else                                                                                      # si no se da el caso 
+   if(nf> -1)
+       nc= nc-1
+       if(nc>= -1)
+        return matriz_uno[nf][nc+1]+matriz_dos[nf][nc+1]+solución(matriz_uno,matriz_dos,nf,nc)
+         else
+         return solución(matriz_uno, matriz_dos,nf-1,2)
+       end
+     end
+   end
+end                                                            #funcion que nos define la solución
+
+# ingresamos los valores de la matriz uno
+Matriz_uno = Array.new(3.0) {Array.new(3.0)}
+[[1,2,1],[3,3,2],[2,3,1]]
+# ingresamos los valores de la matriz dos
+Matriz_dos = Array.new(3.0){Array.new(3.0)}
+[[1,2,1],[3,3,2],[2,3,1]]
+For i in 0..2
+   For j in 0..2
+         Matriz_uno[i][j] =rand(1001)  
+          Matriz_dos[i][j] = rand(1001)
+   end
+end
+o..2
+#imprimimos la matriz uno
+For i in 0..2
+   For j in 0..2
+       Print matriz_uno[i][j], “\t”
+   end
+   Print “\n”    # salto de linia para que sea ordenado y se vea como una matriz
+end
+#imprimimos la matriz dos
+For i in 0..2
+   For j in 0..2
+       Print matriz_dos[i][j], “\t”
+   end
+   Print “\n”    # salto de linia para que sea ordenado y se vea como una matriz
+end
+
+
+
+ 
