@@ -3,7 +3,7 @@ Ejercicio 01:  "Imprimir hola mundo"
 #Imprimir hola mundo
 #Autor: Iván Huayhua 
 puts  "Hola Mundo"
-end
+end                             #Fin programa   
 
 
 
@@ -16,7 +16,10 @@ año_actual=2021                 #Año actual
 año_nacimiento=2001
 edad=año_actual-año_nacimiento  #Calcular la edad
 puts "Tienes #{edad} años"      #Imprimir edad ctual
-end
+end                             #Fin programa
+
+
+
 
 Ejercicio 03: Bucles
 
