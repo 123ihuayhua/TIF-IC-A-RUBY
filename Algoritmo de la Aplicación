@@ -1,0 +1,79 @@
+Ejercicio de aplicación:
+
+#Carrito de compras
+#Autor:  IVAN RODRIGO HUAYHUA MAYTA
+#Autor:  ANTHONY MARCOS MOROCCOIRE PACOMPIA
+#Autor:  RONI COMPANOCCA CHECCO
+#programa que ayude en las compras
+#creamos una opción para capturar datos y retornarlo
+def menuPrincipal()
+#Ahora comenzamos a imprimir las opciones 
+     puts “MENU PRINCIPAL”
+     puts “        1. REALIZAR COMPRA  “
+     puts “         2. DEVOLVER COMPRA “
+     puts “         3. ACTUALIZAR INVENTARIO  “
+     puts  “        4. SALIR   “
+     # declaramos un variable donde vamos a capturar lo que se ingrese por el teclado
+     op=gets.to_i
+     return op   #retornamos un numero
+end
+#creamos una función que nos permite limpiar la pantalla
+def cls()
+      system(“cls”)
+end
+#creamos el menú 2
+def menuCompra()
+      puts “MENU COMPRA”
+      puts “       1.SELECCIONAR PRODUCTO  “
+      puts “      2.SELECCIONAR MARCA  “
+      puts “       2.SELECCIONAR PRECIO  “
+      op=gets.to_I
+      return op
+end
+#definimos una función donde todo esta relacionado al carrito
+def addCart()
+#do while creamos opciones
+      begin 
+#creamos una variable para que retorne cuando llamamos una función
+              opcion=menuCompra()
+              case opción
+              when 1
+                  # lo pondremos esta función al incio para que vaya limpiando la pantalla
+                  cls
+                  # colocamos mensajes cuando llamamos opciones
+                  puts “opción compra 1”
+              when 2
+                  cls
+                  puts “opción compra 2”
+              when 3
+                   cls
+                   puts “opción compra 3”
+              when 4
+                   cls
+                   puts “opción compra 4”
+              end
+        #para que se repita todo lo que está dentro del begin
+        end while opcion>=1 and opcion<5 
+end
+
+begin 
+         opcion=menuPrincipal()
+         case opción
+         when 1
+             cls
+             puts “opción 1”
+         when 2
+             cls
+             puts “opción 2”
+         when 3
+                cls
+                puts “opción 3”
+          when 4
+                cls
+                puts “opción 4”
+           end
+end while opcion>=1 and opcion<5 
+
+
+
+
