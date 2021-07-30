@@ -1,0 +1,30 @@
+Ejercicio 01:  "Imprimir hola mundo"
+
+#Imprimir hola mundo
+#Autor: Iván Huayhua 
+puts  "Hola Mundo"
+end
+
+
+
+Ejercicio 02: Variables
+
+#Variables
+#Autor: Anthony Moroccoire 
+año_actual=2021                 #Año actual
+"¿En qué año naciste?"
+año_nacimiento=2001
+edad=año_actual-año_nacimiento  #Calcular la edad
+puts "Tienes #{edad} años"      #Imprimir edad ctual
+end
+
+Ejercicio 03: Bucles
+
+#Impimir numeros del 0 al 9
+#Autor: Iván Huayhua 
+var=0                         #Inicializar variable 
+while var<10                  #Iniciar bucle 
+puts var                      #Imprimir bucle 
+var+=1
+end                           #Fin programa 
+
